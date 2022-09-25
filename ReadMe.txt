@@ -1,0 +1,1 @@
+﻿ApiController only contain all the API to use in the project while all other Controllers are used for hardCoding the value at initial stage.
