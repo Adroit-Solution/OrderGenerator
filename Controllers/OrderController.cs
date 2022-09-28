@@ -1,5 +1,6 @@
 ﻿using MarketPlace_Orders.Database;
 using MarketPlace_Orders.Models;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -18,6 +19,7 @@ namespace MarketPlace_Orders.Controllers
         }
 
         [HttpGet]
+        [EnableCors("AllowAll")]
         public async Task<ActionResult> GetOrders()
         {
             var list = await marketPlaceContext.Orders.ToListAsync();
